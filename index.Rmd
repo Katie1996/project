@@ -1,0 +1,65 @@
+---
+title: "Analysis of NEON Woody plant vegetation structure data"
+author: "Katie Pearson"
+date: "2021-05-05"
+output:
+  html_document:
+    toc: true 
+    toc_float: true
+    theme: yeti 
+    highlight: tango
+---
+##  Data Overview 
+This data is showing various information about **woody tree species** in an area. The data includes *stem width*, *tree length* and other information.
+
+![](https://www.telegraph.co.uk/content/dam/news/2016/09/08/107667228_beech-tree-NEWS_trans_NvBQzQNjv4BqplGOf-dgG3z4gg9owgQTXEmhb5tXCQRHAvHRWfzHzHk.jpg?imwidth=1400)
+```{r, echo = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+```
+
+```{r chunk-name,echo =FALSE}
+print('hello world!')
+
+```
+
+## Data
+```{r read-chunks, echo=FALSE}
+knitr::read_chunk("analysis.R")
+```
+
+
+```{r analysis-setup}
+
+```
+## Here's our analytical dataset
+
+```{r}
+DT::datatable(individual)
+```
+
+
+*Preparing Data*
+To prepare our data, we removed **all NA values** and also *Liana* tree species.
+```{r analysis-filter-data,echo =FALSE}
+
+```
+
+
+
+We then set the data to be in order of numbers of individuals.
+
+
+
+```{r analysis-set-factor-levels,echo =FALSE}
+
+```
+
+*Figure 1: Barplot of the data *
+```{r, analysis-fig1-barplot, fig.cap = "Figure 1: Counts of tree species",echo =FALSE, warning = FALSE}
+
+```
+*Figure 2: Violin plot of the data *
+```{r, analysis-fig2-violinplots, fig.cap ="Figure 2: Distribution and statistical summaries of stem diameter and height across tree types" ,echo =FALSE, warning = FALSE}
+
+```
+
